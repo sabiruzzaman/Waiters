@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/menu_menu">
+
+    <fragment
+        android:id="@+id/menu_menu"
+        android:name="com.intechnology.waiters.menu.view.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menu_menu_to_menuCategoryListFragment"
+            app:destination="@id/menuCategoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_orderList"
+        android:name="com.intechnology.waiters.OrderListFragment"
+        android:label="Order List"
+        tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/menu_complete_order"
+        android:name="com.intechnology.waiters.CompleteOrderFragment"
+        android:label="Complete Order"
+        tools:layout="@layout/fragment_complete_order" />
+    <fragment
+        android:id="@+id/menu_order_history"
+        android:name="com.intechnology.waiters.OrderHistoryFragment"
+        android:label="Order History"
+        tools:layout="@layout/fragment_order_history" />
+    <fragment
+        android:id="@+id/menuCategoryListFragment"
+        android:name="com.intechnology.waiters.MenuCategoryListFragment"
+        android:label="fragment_menu_category_list"
+        tools:layout="@layout/fragment_menu_category_list" >
+        <action
+            android:id="@+id/action_menuCategoryListFragment_to_menu_menu"
+            app:destination="@id/menu_menu" />
+    </fragment>
+
+</navigation>
