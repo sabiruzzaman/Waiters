@@ -12,7 +12,7 @@ import com.intechnology.waiters.R
 import com.intechnology.waiters.databinding.FragmentMenuBinding
 import com.intechnology.waiters.menu.adapter.MenuAdapter
 
-class MenuFragment : Fragment(), MenuAdapter.Interaction {
+class MenuFragment : Fragment(){
     lateinit var binding: FragmentMenuBinding
     lateinit var adapter: MenuAdapter
     override fun onCreateView(
@@ -29,15 +29,10 @@ class MenuFragment : Fragment(), MenuAdapter.Interaction {
     }
 
     private fun viewInit() {
-        adapter = MenuAdapter(this, requireContext())
+        adapter = MenuAdapter( requireContext())
         binding.menuRvId.layoutManager = GridLayoutManager(requireContext(), 2)
         binding.menuRvId.adapter = adapter
 
-    }
-
-    override fun selectMenu() {
-        val bundle = bundleOf()
-        findNavController().navigate(R.id.action_menu_menu_to_menuCategoryListFragment, bundle)
     }
 
 }

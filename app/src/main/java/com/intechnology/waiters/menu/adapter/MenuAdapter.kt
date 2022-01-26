@@ -1,15 +1,20 @@
 package com.intechnology.waiters.menu.adapter
 
+import android.app.Dialog
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import androidx.recyclerview.widget.RecyclerView
 import com.intechnology.waiters.R
 import com.intechnology.waiters.databinding.ItemMenuBinding
+import android.widget.ImageView
+import com.intechnology.waiters.cart.CartActivity
 
 
-class MenuAdapter( private val interaction : Interaction, val context: Context) :
+class MenuAdapter(val context: Context) :
     RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,20 +29,33 @@ class MenuAdapter( private val interaction : Interaction, val context: Context) 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
 
         with(holder.binding) {
-            itemMenuId.setOnClickListener {
-                interaction.selectMenu()
+
+            menuItemImgId.setOnClickListener() {
+                val dialog = Dialog(context)
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+                dialog.setContentView(R.layout.food_details)
+                dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
+                val closeImg: ImageView = dialog.findViewById(R.id.closeImgId)
+                closeImg.setOnClickListener() {
+                    dialog.dismiss()
+                }
+                dialog.setCanceledOnTouchOutside(false)
+                dialog.show()
             }
+
+            shoppingCartImgId.setOnClickListener() {
+                val intent = Intent(context, CartActivity::class.java)
+                context.startActivity(intent)
+            }
+
         }
 
-        holder.binding.itemMenuId.setOnClickListener {
-            interaction.selectMenu()
-        }
+
     }
 
     override fun getItemCount(): Int {
         return 20
     }
-    interface Interaction {
-        fun selectMenu()
-    }
+
 }

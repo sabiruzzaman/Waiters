@@ -2,16 +2,16 @@ package com.intechnology.waiters.cart
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.intechnology.waiters.R
+import com.intechnology.waiters.cart.adapter.CartAdapter
+import com.intechnology.waiters.cart.adapter.TableAdapter
 import com.intechnology.waiters.databinding.ActivityCartBinding
-import com.intechnology.waiters.MainActivity
 
 
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
-    lateinit var adapter: TableAdapter
+    lateinit var tableAdapter: TableAdapter
+    lateinit var cartAdapter: CartAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +23,18 @@ class CartActivity : AppCompatActivity() {
 
     private fun viewInit() {
 
-        adapter = TableAdapter(this)
+        tableAdapter = TableAdapter(this)
+        cartAdapter = CartAdapter(this)
 
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.tableRvId.layoutManager = layoutManager
-        binding.tableRvId.adapter = adapter
+        binding.tableRvId.adapter = tableAdapter
+
+        val layoutManager1 = LinearLayoutManager(this)
+        binding.cartRvId.layoutManager = layoutManager1
+        binding.cartRvId.adapter = cartAdapter
+
+
 
         binding.backImgId.setOnClickListener() {
             onBackPressed()

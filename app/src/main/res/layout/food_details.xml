@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/itemImgId"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image1"
+                app:layout_constraintDimensionRatio="1.1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/itemNameId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="Meaty Onion Pizza"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/itemImgId" />
+
+            <TextView
+                android:id="@+id/priceTvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strike"
+                android:textColor="#EF1000"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/itemNameId"
+                app:layout_constraintTop_toBottomOf="@+id/itemNameId" />
+
+
+            <TextView
+                android:id="@+id/discountPriceTvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="৳ 145.00"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/itemNameId"
+                app:layout_constraintTop_toBottomOf="@+id/priceTvId" />
+
+            <TextView
+                android:id="@+id/sizeTvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size: 1.5"
+                app:layout_constraintEnd_toEndOf="@+id/itemNameId"
+                app:layout_constraintTop_toTopOf="@+id/priceTvId" />
+
+            <TextView
+                android:id="@+id/offTvId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimary"
+                android:padding="2dp"
+                android:text="30% OFF"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="@+id/sizeTvId"
+                app:layout_constraintTop_toTopOf="@+id/discountPriceTvId" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/food_dec"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/offTvId"
+                app:layout_constraintStart_toStartOf="@+id/discountPriceTvId"
+                app:layout_constraintTop_toBottomOf="@+id/offTvId" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/closeImgId"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_circle"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white" />
+
+
+</RelativeLayout>

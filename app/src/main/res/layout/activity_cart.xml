@@ -64,68 +64,78 @@
 
         <TextView
             android:id="@+id/itemInfoTvId"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Item Info"
             android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/sizeTvId"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
             android:id="@+id/sizeTvId"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
             android:text="Size"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/unitPriceTvId"
+            app:layout_constraintStart_toEndOf="@+id/itemInfoTvId"
             app:layout_constraintTop_toTopOf="@id/itemInfoTvId" />
 
         <TextView
             android:id="@+id/unitPriceTvId"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
             android:text="Unit Price"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/quantityTvId"
+            app:layout_constraintStart_toEndOf="@+id/sizeTvId"
             app:layout_constraintTop_toTopOf="@id/sizeTvId" />
 
 
         <TextView
             android:id="@+id/quantityTvId"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
             android:text="Quantity"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/totalPriceTvId"
+            app:layout_constraintStart_toEndOf="@+id/unitPriceTvId"
             app:layout_constraintTop_toTopOf="@id/unitPriceTvId" />
 
 
         <TextView
             android:id="@+id/totalPriceTvId"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="center"
             android:text="Total Price"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/quantityTvId"
             app:layout_constraintTop_toTopOf="@id/quantityTvId" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/cartRvId"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cartInfoSection" />
+        app:layout_constraintTop_toBottomOf="@+id/cartInfoSection"
+        tools:listitem="@layout/item_cart" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -141,8 +151,13 @@
             android:id="@+id/selectTableCardId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="0dp"
             app:layout_constraintBottom_toTopOf="@+id/tableRvId"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -171,12 +186,16 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/tableRvId"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/orderNoteCardId" />
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/orderNoteCardId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.cardview.widget.CardView
+            android:paddingTop="5dp"
             android:id="@+id/orderNoteCardId"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -202,7 +221,9 @@
             android:id="@+id/priceSectionLayoutId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/btnSectionId">
+            app:layout_constraintBottom_toTopOf="@+id/btnSectionId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/vatTvId"
@@ -247,8 +268,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Grand Total"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/serviceChargeTvId" />
 
@@ -267,6 +290,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="#D0000000"
             android:id="@+id/btnSectionId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -280,8 +304,10 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="Cancel"
                 android:textAppearance="@android:style/TextAppearance.Medium"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/placeOrderBtnId"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

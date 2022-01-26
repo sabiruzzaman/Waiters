@@ -1,4 +1,4 @@
-package com.intechnology.waiters.cart
+package com.intechnology.waiters.cart.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,19 +7,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.intechnology.waiters.R
 
-class TableAdapter  ( val context: Context) :
-RecyclerView.Adapter<TableAdapter.TableViewHolder>() {
+class CartAdapter ( val context: Context) :
+    RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
-    class TableViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // val binding = ItemMenuBinding.bind(itemView)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TableViewHolder {
-        val view: View = LayoutInflater.from(context).inflate(R.layout.item_table, parent, false)
-        return TableViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
+        val view: View = LayoutInflater.from(context).inflate(R.layout.item_cart, parent, false)
+        return CartViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TableViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
 
         /*      with(holder.binding) {
                   itemMenuId.setOnClickListener {

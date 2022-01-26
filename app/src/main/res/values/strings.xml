@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Waiters</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tk_sign">৳</string>
+    <string name="strike"> <strike>৳ 125.00</strike> </string>
+    <string name="food_dec">May Onion Pizza Freshly looked dough topped with sausage, cubed chicken, homemade mariposa May Onion Pizza Freshly looked dough topped with sausage, cubed chicken, homemade mariposa
+    May Onion Pizza Freshly looked dough topped with sausage, cubed chicken, homemade mariposa
+    May Onion Pizza Freshly looked dough topped with sausage, cubed chicken, homemade mariposa </string>
 </resources>

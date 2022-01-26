@@ -8,18 +8,64 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="menuCategoryListFragment">
+                  <entry key="menuFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="96" />
-                            <option name="y" value="-606" />
+                            <option name="x" value="93" />
+                            <option name="y" value="93" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="moreFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="425" />
+                            <option name="y" value="93" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="orderStatusFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="259" />
+                            <option name="y" value="91" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </LayoutPositions>
+          </value>
+        </entry>
+        <entry key="nav_graph.xml">
+          <value>
+            <LayoutPositions>
+              <option name="myPositions">
+                <map>
+                  <entry key="FirstFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_menuCategoryListFragment_to_menu_menu">
+                            <entry key="action_FirstFragment_to_SecondFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -29,59 +75,23 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="menu_complete_order">
+                  <entry key="SecondFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="331" />
-                            <option name="y" value="-165" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="menu_menu">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-355" />
-                            <option name="y" value="-176" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_menu_menu_to_menuCategoryListFragment">
+                            <entry key="action_SecondFragment_to_FirstFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="menu_orderList">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="155" />
-                            <option name="y" value="-169" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="menu_order_history">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="511" />
-                            <option name="y" value="-166" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
