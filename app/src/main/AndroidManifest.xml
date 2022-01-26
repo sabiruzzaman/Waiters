@@ -13,7 +13,7 @@
             android:name=".cart.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".CategoryListActivity"
+            android:name=".orderStatus.OrderDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".LogInActivity"
@@ -32,4 +32,6 @@
         </activity>
     </application>
 
+
 </manifest>
+

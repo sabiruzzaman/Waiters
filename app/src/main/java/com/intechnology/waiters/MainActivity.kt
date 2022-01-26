@@ -12,9 +12,9 @@ import com.intechnology.waiters.cart.CartActivity
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    lateinit var nevController: NavController
-    lateinit var nevigationui: NavigationUI
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var nevController: NavController
+    private lateinit var navigationUI: NavigationUI
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,24 +26,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun viewInit() {
 
-
         nevController = NavController(this)
-        nevigationui = NavigationUI
-        binding.navigationViewId.itemIconTintList
+        navigationUI = NavigationUI
 
-
-        binding.menuImgId.setOnClickListener() {
-            binding.drawerLayoutId.openDrawer(GravityCompat.START)
-        }
-
-        nevController = Navigation.findNavController(this, R.id.navHostFragment)
-        nevigationui.setupWithNavController(binding.navigationViewId, nevController)
+        nevController = Navigation.findNavController(this, R.id.hostFragment)
+        navigationUI.setupWithNavController(binding.bottomNavigationView, nevController)
 
         nevController.addOnDestinationChangedListener(NavController.OnDestinationChangedListener { controller, destination, arguments ->
             //  binding.titleTvId.text = destination.label
 
         })
-
 
 
         binding.cartLayoutId.setOnClickListener() {

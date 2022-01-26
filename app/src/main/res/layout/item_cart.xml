@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/itemInfoTvId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="start"
+        android:text=" Fried rice"
+        app:layout_constraintEnd_toStartOf="@+id/sizeTvId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sizeTvId"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="1.2"
+        app:layout_constraintEnd_toStartOf="@+id/unitPriceTvId"
+        app:layout_constraintStart_toEndOf="@+id/itemInfoTvId"
+        app:layout_constraintTop_toTopOf="@id/itemInfoTvId" />
+
+    <TextView
+        android:id="@+id/unitPriceTvId"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="1230"
+        app:layout_constraintEnd_toStartOf="@+id/quantityTvId"
+        app:layout_constraintStart_toEndOf="@+id/sizeTvId"
+        app:layout_constraintTop_toTopOf="@id/sizeTvId" />
+
+
+    <TextView
+        android:id="@+id/quantityTvId"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="12"
+        app:layout_constraintEnd_toStartOf="@+id/totalPriceTvId"
+        app:layout_constraintStart_toEndOf="@+id/unitPriceTvId"
+        app:layout_constraintTop_toTopOf="@id/unitPriceTvId" />
+
+
+    <TextView
+        android:id="@+id/totalPriceTvId"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="15787"
+        app:layout_constraintEnd_toStartOf="@+id/deleteImgId"
+        app:layout_constraintStart_toEndOf="@+id/quantityTvId"
+        app:layout_constraintTop_toTopOf="@id/quantityTvId" />
+
+
+    <ImageView
+        android:id="@+id/deleteImgId"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/totalPriceTvId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalPriceTvId"
+        app:layout_constraintTop_toTopOf="@id/totalPriceTvId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
