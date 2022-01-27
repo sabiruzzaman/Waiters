@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemMenuId"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/menuItemImgId"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/menuItemNameTvId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Meaty Onion Pizza"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuItemImgId" />
+
+
+        <TextView
+            android:id="@+id/priceTvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/strike"
+            android:textColor="#EF1000"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/menuItemNameTvId"
+            app:layout_constraintTop_toBottomOf="@+id/menuItemNameTvId" />
+
+
+        <TextView
+            android:id="@+id/discountPriceTvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳ 145.00"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/menuItemNameTvId"
+            app:layout_constraintTop_toBottomOf="@+id/priceTvId" />
+
+        <TextView
+            android:id="@+id/sizeTvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size: 1.5"
+            app:layout_constraintEnd_toEndOf="@+id/menuItemNameTvId"
+            app:layout_constraintTop_toTopOf="@+id/priceTvId" />
+
+        <TextView
+            android:id="@+id/offTvId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="30% OFF"
+            android:textSize="8sp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/sizeTvId"
+            app:layout_constraintTop_toTopOf="@+id/discountPriceTvId" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/discountPriceTvId"
+            app:layout_constraintTop_toBottomOf="@+id/discountPriceTvId">
+
+
+            <TextView
+                android:id="@+id/dispensingCountDecrement"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/shape_circle"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="−"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/disposingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:gravity="fill"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="5dp"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/dispensingCountIncrement"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/shape_circle"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Unit"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shoppingCartImgId"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout"
+            app:srcCompat="@drawable/ic_shopping_cart" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

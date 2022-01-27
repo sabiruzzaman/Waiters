@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.intechnology.waiters.R
 import com.intechnology.waiters.databinding.FragmentMenuBinding
 import com.intechnology.waiters.menu.adapter.MenuAdapter
@@ -30,7 +31,7 @@ class MenuFragment : Fragment(){
 
     private fun viewInit() {
         adapter = MenuAdapter( requireContext())
-        binding.menuRvId.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.menuRvId.layoutManager = LinearLayoutManager(context)
         binding.menuRvId.adapter = adapter
 
     }
