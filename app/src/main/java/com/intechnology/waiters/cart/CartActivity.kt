@@ -1,11 +1,14 @@
 package com.intechnology.waiters.cart
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.intechnology.waiters.MainActivity
 import com.intechnology.waiters.cart.adapter.CartAdapter
 import com.intechnology.waiters.cart.adapter.TableAdapter
 import com.intechnology.waiters.databinding.ActivityCartBinding
+import com.shashank.sony.fancytoastlib.FancyToast
 
 
 class CartActivity : AppCompatActivity() {
@@ -39,6 +42,35 @@ class CartActivity : AppCompatActivity() {
         binding.backImgId.setOnClickListener() {
             onBackPressed()
         }
+
+        binding.placeOrderBtnId.setOnClickListener(){
+
+            FancyToast.makeText(
+                this,
+                "Order Success!",
+                FancyToast.LENGTH_SHORT,
+                FancyToast.SUCCESS,
+                false
+            ).show()
+
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+
+        }
+
+        binding.cancelBtnId.setOnClickListener(){
+
+            FancyToast.makeText(
+                this,
+                "Cancel Your Order.",
+                FancyToast.LENGTH_SHORT,
+                FancyToast.ERROR,
+                false
+            ).show()
+
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+
+        }
+
 
     }
 }
