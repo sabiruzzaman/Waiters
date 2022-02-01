@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/background_shape.xml" value="0.1475" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_arrow_drop_down.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_arrow_drop_up.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_check.xml" value="0.2203125" />
@@ -10,6 +11,7 @@
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_email.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_history.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_more.xml" value="0.2" />
+        <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_restaurant_menu.xml" value="0.162" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_restaurant_table.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/ic_waiter.xml" value="0.2203125" />
         <entry key="..\:/AppProject/Waiters/app/src/main/res/drawable/shape_circle.xml" value="0.2203125" />

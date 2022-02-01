@@ -2,14 +2,13 @@ package com.intechnology.waiters
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.intechnology.waiters.databinding.ActivityMainBinding
 import android.content.Intent
 import com.intechnology.waiters.cart.CartActivity
-
+import com.shashank.sony.fancytoastlib.FancyToast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -37,10 +36,22 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-
         binding.cartLayoutId.setOnClickListener() {
             val intent = Intent(this, CartActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.logOutImgId.setOnClickListener(){
+
+            FancyToast.makeText(
+                this,
+                "Logout Success!",
+                FancyToast.LENGTH_SHORT,
+                FancyToast.SUCCESS,
+                false
+            ).show()
+
+            startActivity(Intent(applicationContext, LogInActivity::class.java))
         }
 
 
